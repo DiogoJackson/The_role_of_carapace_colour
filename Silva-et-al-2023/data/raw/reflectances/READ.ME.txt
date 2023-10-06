@@ -1,0 +1,12 @@
+#------------------ Note-----------------------
+
+# About the data "leptodactyla_and_mjoebergi".
+
+The average reflectance of Austruca mjoebergi was calculated from 40 individuals provided by Miranda Dyson, Senior Lecturer
+Environment, Earth and  Ecosystem Sciences, Faculty of Science, Technology, Engineering and Mathematics.
+open.ac.uk
+The Open University, Walton Hall, Milton Keynes, MK7 6AA
+
+The average reflectance of Leptuca leptodactyla was calculated from 40 individuals from the article by Silva et al (2022).
+
+#-----------------------------------------------

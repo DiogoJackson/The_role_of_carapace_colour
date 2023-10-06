@@ -1,0 +1,5 @@
+#------------------- WARNING ------------------------ 
+
+NEVER DELETE ANY DOCUMENT/DATA/WHATEVER INSIDE THE 'raw' fold.
+
+#----------------------------------------------------
