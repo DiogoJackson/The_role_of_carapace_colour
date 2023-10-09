@@ -89,11 +89,11 @@ p3
 
 p3<- ggdraw() + 
   draw_plot(p3) +
-  draw_image(image = "image/Fiddler-draw_C1.png", 
+  draw_image(image = "image/Fiddler-draw_B1.png", 
              scale = 0.17,
              x = -0.12, 
              y = 0.28) +
-  draw_image(image = "image/Fiddler-draw_C2.png",
+  draw_image(image = "image/Fiddler-draw_B2.png",
              scale = 0.17,
              x = 0.25,
              y = 0.14)
@@ -188,7 +188,7 @@ p_all
 
 # 4. Save plot -----------------------------------------------------------------
 ggsave(plot = p_all, 
-       filename = "output/figure/Figure_3.png",
+       filename = "output/figure/Fig_02_female-choices.png",
        width = 10, 
        height = 13, 
        dpi = 300)
