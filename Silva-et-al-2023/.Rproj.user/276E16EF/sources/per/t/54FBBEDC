@@ -1,0 +1,26 @@
+{
+    "id": "54FBBEDC",
+    "path": "~/GitHub/Silva_et_al_2023/Silva-et-al-2023/script/01_Show_binomial-test.R",
+    "project_path": "script/01_Show_binomial-test.R",
+    "type": "r_source",
+    "hash": "3049128866",
+    "contents": "",
+    "dirty": false,
+    "created": 1696834411336.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "0,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1696834932,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1696834932214,
+    "read_only": false,
+    "read_only_alternatives": []
+}
