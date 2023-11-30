@@ -20,7 +20,7 @@ data_LBCP_agg <- read.csv("output/table/table_01_data_LBCP_agg.csv")
 
 #2.1. LNCN. L. leptodactyla vs L. cumulanta (naturals) ----
 p1 <- ggplot(data = data_LNCN_agg, aes(x = species, y = female_choice, fill = species)) +
-  geom_bar(color = "black", stat = "identity", show.legend = F, width = 0.7) +
+  geom_bar(color = "black", stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +
   scale_fill_manual(values = c("#e9e6dd", "#e9e6dd")) +
   scale_x_discrete(limits = c('leptodactyla','cumulanta'),
@@ -29,25 +29,25 @@ p1 <- ggplot(data = data_LNCN_agg, aes(x = species, y = female_choice, fill = sp
                               expression(italic('L. cumulanta'))
                               )) +
   labs(x = "Treatments", y = "Female choice", subtitle = 'p < 0.001')+
-  ylim(0, 60)+
+  ylim(0, 63)+
   theme_test(base_size = 18)
 p1
 
 p1 <- ggdraw() + 
   draw_plot(p1) +
   draw_image(image = "image/Fiddler-draw_A1.png", 
-             scale = 0.17,
-             x = -0.12, 
-             y = 0.33) +
+             scale = 0.21,
+             x = -0.114, 
+             y = 0.31) +
   draw_image(image = "image/Fiddler-draw_A2.png",
-             scale = 0.17,
-             x = 0.25,
-             y = -0.11)
+             scale = 0.21,
+             x = 0.26,
+             y = -0.12)
 p1
 
 #2.2. LCCA. L. leptodactyla quela Cinza vs L. cumulanta quela amarelo ----
 p2 <- ggplot(data = data_LCCA_agg, aes(x = species, y = female_choice, fill = species)) +
-  geom_bar(color = "black", stat = "identity", show.legend = F, width = 0.7) +
+  geom_bar(color = "black", stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +
   scale_fill_manual(values = c("#e9e6dd", "#e9e6dd")) +
   scale_x_discrete(limits = c('LC','CA'),
@@ -63,13 +63,13 @@ p2
 p2 <- ggdraw() + 
   draw_plot(p2) +
   draw_image(image = "image/Fiddler-draw_B1.png", 
-             scale = 0.17,
-             x = -0.12, 
-             y = 0.28) +
+             scale = 0.21,
+             x = -0.114, 
+             y = 0.29) +
   draw_image(image = "image/Fiddler-draw_B2.png",
-             scale = 0.17,
-             x = 0.25,
-             y = 0.05)
+             scale = 0.21,
+             x = 0.26,
+             y = 0.06)
 p2
 
 #2.3. LCLA. leptodactyla quela amarelo vs leptodactyla quela amarelo (carapacas brancos naturais) ----
@@ -90,18 +90,18 @@ p3
 p3<- ggdraw() + 
   draw_plot(p3) +
   draw_image(image = "image/Fiddler-draw_C1.png", 
-             scale = 0.17,
-             x = -0.12, 
-             y = 0.28) +
+             scale = 0.21,
+             x = -0.114, 
+             y = 0.29) +
   draw_image(image = "image/Fiddler-draw_C2.png",
-             scale = 0.17,
-             x = 0.25,
-             y = 0.14)
+             scale = 0.21,
+             x = 0.26,
+             y = 0.15) #quanto menor, mais baixo
 p3
 
 #2.4. LACA. leptodactyla quela amarelo vs cumulanta quela amarelo (carapacas naturais) ----
 p4 <- ggplot(data = data_LACA_agg, aes(x = species, y = female_choice, fill = species)) +
-  geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.7) +
+  geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +
   scale_fill_manual(values = c("#e9e6dd", "#e9e6dd")) +
   scale_x_discrete(limits = c('LA','CA'),
@@ -117,17 +117,17 @@ p4
 p4 <- ggdraw() + 
   draw_plot(p4) +
   draw_image(image = "image/Fiddler-draw_D1.png", 
-             scale = 0.17,
-             x = -0.12, 
-             y = 0.25) +
+             scale = 0.21,
+             x = -0.114, 
+             y = 0.26) +
   draw_image(image = "image/Fiddler-draw_D2.png",
-             scale = 0.17,
-             x = 0.25,
-             y = -0.16)
+             scale = 0.21,
+             x = 0.26,
+             y = -0.15)
 p4
 #2.5. LPCB. leptodactyla carapaca Preto vs cumulanta branco (quelas pintadas de amarelo)----
 p5 <- ggplot(data = data_LPCB_agg, aes(x = species, y = female_choice, fill = species)) +
-  geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.7) +
+  geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +
   scale_fill_manual(values = c("#e9e6dd", "#e9e6dd")) +
   scale_x_discrete(limits = c('LP','CB'),
@@ -143,18 +143,18 @@ p5
 p5<- ggdraw() + 
   draw_plot(p5) +
   draw_image(image = "image/Fiddler-draw_E1.png", 
-             scale = 0.17,
-             x = -0.12, 
-             y = -0.11) +
+             scale = 0.21,
+             x = -0.114, 
+             y = -0.10) +
   draw_image(image = "image/Fiddler-draw_E2.png",
-             scale = 0.17,
-             x = 0.25,
-             y = 0.25)
+             scale = 0.21,
+             x = 0.26,
+             y = 0.26)
 p5
 
 #2.6. LBCP. leptodactyla carapaca Branco vs cumulanta preto (quelas pintadas de amarelo)----
 p6 <- ggplot(data = data_LBCP_agg, aes(x = species, y = female_choice, fill = species)) +
-  geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.7) +
+  geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +
   scale_fill_manual(values = c("#e9e6dd", "#e9e6dd")) +
   scale_x_discrete(limits = c('LB','CP'),
@@ -170,12 +170,12 @@ p6
 p6 <- ggdraw() + 
   draw_plot(p6) +
   draw_image(image = "image/Fiddler-draw_E2.png", 
-             scale = 0.17,
-             x = -0.12, 
-             y = 0.23) +
+             scale = 0.21,
+             x = -0.114, 
+             y = 0.24) +
   draw_image(image = "image/Fiddler-draw_E1.png",
-             scale = 0.17,
-             x = 0.25,
+             scale = 0.21,
+             x = 0.26,
              y = -0.08)
 p6
 
@@ -194,3 +194,4 @@ ggsave(plot = p_all,
        dpi = 300)
 
 # END----
+
