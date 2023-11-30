@@ -1,0 +1,3 @@
+A fonte dos codigos das cores nos caranguejos possuem a seguinte formatacao:
+
+CALIBRI, 72, NEGRITO

@@ -74,7 +74,7 @@ p2
 
 #2.3. LCLA. leptodactyla quela amarelo vs leptodactyla quela amarelo (carapacas brancos naturais) ----
 p3 <- ggplot(data = data_LCLA_agg, aes(x = species, y = female_choice, fill = species)) +
-  geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.7) +
+  geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +
   scale_fill_manual(values = c("#e9e6dd", "#e9e6dd")) +
   scale_x_discrete(limits = c('LC','LA'),
