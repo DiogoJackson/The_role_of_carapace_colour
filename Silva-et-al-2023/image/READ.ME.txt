@@ -1,3 +1,15 @@
-A fonte dos codigos das cores nos caranguejos possuem a seguinte formatacao:
+# Informations about fiddler-draw figures to make Figure 03.
 
-CALIBRI, 72, NEGRITO
+# Abbreviation (Calibri, 72, bold)
+
+NW = Natural white
+NY = Natural yellow
+ND = Natural dark green
+NG = Natural grey
+
+PW = Painted white
+PY = Painted yellow
+PD = Painted dark green
+PG = Painted grey
+
+
