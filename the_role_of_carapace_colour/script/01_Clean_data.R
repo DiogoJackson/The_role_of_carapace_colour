@@ -1,5 +1,5 @@
-# Script to load and clean raw dataset
-# Author: Diogo Jackson de Aquino Silva
+# Script to load and clean raw dataset role
+# Author: Diogo Jackson de Aquino Silva 
 # Last update:
 # Fri Oct  6 17:45:11 2023 ------------------------------
 
