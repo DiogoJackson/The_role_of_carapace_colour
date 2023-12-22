@@ -1,4 +1,4 @@
-# Script to load and clean raw dataset role
+# Script to load and clean raw dataset
 # Author: Diogo Jackson de Aquino Silva 
 # Last update:
 # Fri Oct  6 17:45:11 2023 ------------------------------
@@ -69,8 +69,6 @@ any(is.na(data_LBxCP)) #first choice was not registered, it's ok!
 
 #2. Fix variables ----
 
-# 2. Fix variables ----
-
 # Naturals
 data_naturais$pair                <- as.factor(data_naturais$pair)
 data_naturais$species             <- as.factor(data_naturais$species)
@@ -119,7 +117,7 @@ data_LBxCP$first_choice           <- as.numeric(data_LBxCP$first_choice)
 data_LBxCP$carapace_length_mm     <- as.numeric(data_LBxCP$carapace_length_mm)
 data_LBxCP$claw_length_mm         <- as.numeric(data_LBxCP$claw_length_mm)
 
-# 2. Rename column names ------------------------------------------------
+# 3. Rename column names ------------------------------------------------
 dat_natural <- dplyr::rename(data_naturais,
                              scape_side = runnaway_side)
 
@@ -138,7 +136,7 @@ dat_LPxCB <- dplyr::rename(data_LPxCB,
 dat_LBxCP <- dplyr::rename(data_LBxCP,
                            scape_side = runnaway_side)
 
-#save data ----
+# 4. Save processed data ----
 
 #data_naturais
 write.csv(x = dat_natural, 

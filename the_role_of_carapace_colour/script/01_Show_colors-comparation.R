@@ -1,4 +1,4 @@
-#Script to import and show reflectances - artigo mestrado
+#Script to import and show reflectances
 #autor: Diogo Silva
 #data: Fri Sep  8 21:48:26 2023 ------------------------------
 
@@ -7,13 +7,16 @@
 
 #packages ----
 library(pavo)
-library(tidyverse)
-library(colorspec) # to use the function fixpec() you need to install the 'colorspec' package using the code: remotes::install_github("Diogojackson/colorspec/colorspec")
+library(tidyverse) 
 library(cowplot)
+
+library(colorspec)
+# to use the function fixpec() you need to install the 'colorspec' package using the code: remotes::install_github("Diogojackson/colorspec/colorspec")
+#remotes::install_github("Diogojackson/colorspec/colorspec")
 
 #1. import data ----
 
-#1.1. importando refletancia naturais dos Leptuca leptodactyla CTA ----
+#1.1. Importing natural reflectance data from Leptuca leptodactyla CTA ----
 yellow <- getspec("data/raw/reflectances/yellow", ext = c('procspec','txt'),lim = c(300, 700), decimal = ',')
 yellow <- fixspec(yellow)
 plot(yellow)
@@ -32,9 +35,9 @@ plot(white)
 
 lep_mjo <- read.csv("data/raw/reflectances/leptodactyla_and_mjoebergi.csv")
 
-#Plots ----
+#2. Plots ----
 
-#Colors comparation (natural vs paint) ----
+#2.1. Colors comparation (natural vs paint) ----
 p1 <- ggplot(yellow, aes(wl))+
   geom_line(aes(y = yellow_paint, linetype = "Paint"), color = "#ffcf00", linewidth = 0.7)+
   geom_line(aes(y = yellow_natural, linetype = "Natural"), color = "black", linewidth = 0.7)+
@@ -51,7 +54,7 @@ p1 <- ggplot(yellow, aes(wl))+
   guides(linetype = guide_legend(title = NULL))
 p1
 
-#cinza ----
+#2.2. Grey ----
 p2 <- ggplot(grey, aes(wl))+
   geom_line(aes(y = grey_natural), color = "black", linewidth = 0.7, linetype = 1)+
   geom_line(aes(y = grey_paint), color = "grey25", linewidth = 0.7, linetype = 2)+
@@ -63,7 +66,7 @@ p2 <- ggplot(grey, aes(wl))+
   theme(plot.title = element_text(size = 8))
 p2
 
-#verde ----
+#2.3. Dark green ----
 p3 <- ggplot(green, aes(wl))+
   geom_line(aes(y = green_natural), color = "black", linewidth = 0.7, linetype = 1)+
   geom_line(aes(y = green_paint), color = "#0c6834", linewidth = 0.7, linetype = 2)+
@@ -75,7 +78,7 @@ p3 <- ggplot(green, aes(wl))+
   theme(plot.title = element_text(size = 8))
 p3
 
-#branco ----
+#2.4. White ----
 p4 <- ggplot(white, aes(wl))+
   geom_line(aes(y = white_natural), color = "black", linewidth = 0.7, linetype = 1)+
   geom_line(aes(y = white_paint), color = "grey", linewidth = 0.7, linetype = 2)+
@@ -87,7 +90,7 @@ p4 <- ggplot(white, aes(wl))+
   theme(plot.title = element_text(size = 8))
 p4
 
-# L. leptodactyla vs A. mjoebergi ----
+#2.5. L. leptodactyla vs A. mjoebergi ----
 ll_am <- ggplot(lep_mjo, aes(wl)) +
   geom_line(aes(y = mean_mjoebergi, color = "A. mjoebergi"), linewidth = 1) +
   geom_ribbon(aes(ymin = mean_mjoebergi - sd_mjoebergi, ymax = mean_mjoebergi + sd_mjoebergi, fill = "A. mjoebergi"), alpha = 0.5, show.legend = F) +
@@ -109,21 +112,16 @@ ll_am <- ggplot(lep_mjo, aes(wl)) +
 ll_am
 
 
-#unite plots ----
+#3. Unite graphs ----
 plot <- plot_grid(p1, p2, p3, p4, ncol = 2, 
                      labels = "AUTO", 
                      align = "vh",
                      label_size = 8)
 plot
 
-#save ---
-#Paint comparations ----
+#4. Save ---
 
-#ggsave(plot = plot, 
-#       filename = "output/figure/reflectances_comparation.pdf",
-#       width = 4, 
-#       height = 3, 
-#       dpi = 300)
+#4.1 Paint comparations ----
 
 ggsave(plot = plot, 
        filename = "output/figure/Figure_2.png",
@@ -131,7 +129,7 @@ ggsave(plot = plot,
        height = 3, 
        dpi = 300)
 
-#leptodactyla vs mjoebergi comparation ----
+#4.2. leptodactyla vs mjoebergi comparation ----
 ggsave(plot = ll_am, 
        filename = "output/figure/Supplementar_1.png",
        width = 4, 

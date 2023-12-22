@@ -1,4 +1,4 @@
-# Script to build the graphics of results
+# Script to create graphical representations of results
 # Author: Diogo Silva
 # Wed Jun  8 17:19:15 2023 ------------------------------
 # Last update:
@@ -45,7 +45,7 @@ p1 <- ggdraw() +
              y = -0.12)
 p1
 
-#2.2. LCCA. L. leptodactyla quela Cinza vs L. cumulanta quela amarelo ----
+#2.2. LCCA. L. leptodactyla (grey claw) vs L. cumulanta (yellow claw) ----
 p2 <- ggplot(data = data_LCCA_agg, aes(x = species, y = female_choice, fill = species)) +
   geom_bar(color = "black", stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +
@@ -72,7 +72,7 @@ p2 <- ggdraw() +
              y = 0.06)
 p2
 
-#2.3. LCLA. leptodactyla quela amarelo vs leptodactyla quela amarelo (carapacas brancos naturais) ----
+#2.3. LCLA. leptodactyla yellow claw vs leptodactyla yellow claw ( both natural white carapaces) ----
 p3 <- ggplot(data = data_LCLA_agg, aes(x = species, y = female_choice, fill = species)) +
   geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +
@@ -99,7 +99,7 @@ p3<- ggdraw() +
              y = 0.15) #quanto menor, mais baixo
 p3
 
-#2.4. LACA. leptodactyla quela amarelo vs cumulanta quela amarelo (carapacas naturais) ----
+#2.4. LACA. leptodactyla yellow claw vs cumulanta yellow claw (both natural carapaces) ----
 p4 <- ggplot(data = data_LACA_agg, aes(x = species, y = female_choice, fill = species)) +
   geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +
@@ -125,7 +125,8 @@ p4 <- ggdraw() +
              x = 0.26,
              y = -0.15)
 p4
-#2.5. LPCB. leptodactyla carapaca Preto vs cumulanta branco (quelas pintadas de amarelo)----
+
+#2.5. LPCB. leptodactyla dark green painted carapace vs cumulanta white painted carapace (both yellow claw)----
 p5 <- ggplot(data = data_LPCB_agg, aes(x = species, y = female_choice, fill = species)) +
   geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +
@@ -152,7 +153,7 @@ p5<- ggdraw() +
              y = 0.26)
 p5
 
-#2.6. LBCP. leptodactyla carapaca Branco vs cumulanta preto (quelas pintadas de amarelo)----
+#2.6. LBCP. leptodactyla white painted carapace vs cumulanta dark green painted carapace (both yellow claw)----
 p6 <- ggplot(data = data_LBCP_agg, aes(x = species, y = female_choice, fill = species)) +
   geom_bar(color = "black",stat = "identity", show.legend = F, width = 0.5) +
   geom_label(aes(label = female_choice), fill = "white") +

@@ -1,4 +1,4 @@
-# Script to analyse processed_datas
+# Script to analyze processed data
 # Author: Diogo Silva
 # Wed Jun  7 17:19:15 2023 ------------------------------
 # Last update:
