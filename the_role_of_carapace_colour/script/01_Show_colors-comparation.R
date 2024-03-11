@@ -43,7 +43,7 @@ p1 <- ggplot(yellow, aes(wl))+
   geom_line(aes(y = yellow_natural, linetype = "Natural"), color = "black", linewidth = 0.7)+
   ylim(0, 100)+
   labs(title = expression(bold("Yellow claw")),
-        x = "Wavelenght (nm)",
+        x = "Wavelength (nm)",
         y = "Reflectance (%)")+
   theme_test(base_size = 8)+
   scale_linetype_manual(values = c("Paint" = "dashed", "Natural" = "solid")) +
@@ -60,7 +60,7 @@ p2 <- ggplot(grey, aes(wl))+
   geom_line(aes(y = grey_paint), color = "grey25", linewidth = 0.7, linetype = 2)+
   ylim(0, 100)+
   labs(title = expression(bold("Grey claw")),
-       x = "Wavelenght (nm)",
+       x = "Wavelength (nm)",
        y = "Reflectance (%)")+
   theme_test(base_size = 8)+
   theme(plot.title = element_text(size = 8))
@@ -72,7 +72,7 @@ p3 <- ggplot(green, aes(wl))+
   geom_line(aes(y = green_paint), color = "#0c6834", linewidth = 0.7, linetype = 2)+
   ylim(0, 100)+
   labs(title = expression(bold("Dark green carapace")),
-       x = "Wavelenght (nm)",
+       x = "Wavelength (nm)",
        y = "Reflectance (%)")+
   theme_test(base_size = 8)+
   theme(plot.title = element_text(size = 8))
@@ -84,7 +84,7 @@ p4 <- ggplot(white, aes(wl))+
   geom_line(aes(y = white_paint), color = "grey", linewidth = 0.7, linetype = 2)+
   ylim(0, 102)+
   labs(title = expression(bold("White carapace")),
-       x = "Wavelenght (nm)",
+       x = "Wavelength (nm)",
        y = "Reflectance (%)")+
   theme_test(base_size = 8)+
   theme(plot.title = element_text(size = 8))
