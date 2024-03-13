@@ -28,7 +28,7 @@ p1 <- ggplot(data = data_LNCN_agg, aes(x = species, y = female_choice, fill = sp
                                                 )), 
                               expression(italic('L. cumulanta'))
                               )) +
-  labs(x = "Treatments", y = "Female choice", subtitle = 'p < 0.001')+
+  labs(x = "Treatments", y = "Female choice")+
   ylim(0, 63)+
   theme_test(base_size = 18)
 p1
@@ -38,11 +38,11 @@ p1 <- ggdraw() +
   draw_image(image = "image/Fiddler-draw_A1.png", 
              scale = 0.21,
              x = -0.114, 
-             y = 0.31) +
+             y = 0.38) +
   draw_image(image = "image/Fiddler-draw_A2.png",
              scale = 0.21,
              x = 0.26,
-             y = -0.12)
+             y = -0.10)
 p1
 
 #2.2. LCCA. L. leptodactyla (grey claw) vs L. cumulanta (yellow claw) ----
@@ -55,7 +55,7 @@ p2 <- ggplot(data = data_LCCA_agg, aes(x = species, y = female_choice, fill = sp
                    )), 
                    expression(italic('L. cumulanta'))
                    )) +
-  labs(x = "Treatments", y = "Female choice", subtitle = 'p < 0.05')+
+  labs(x = "Treatments", y = "Female choice")+
   ylim(0, 50)+
   theme_test(base_size = 18)
 p2
@@ -65,11 +65,11 @@ p2 <- ggdraw() +
   draw_image(image = "image/Fiddler-draw_B1.png", 
              scale = 0.21,
              x = -0.114, 
-             y = 0.29) +
+             y = 0.36) +
   draw_image(image = "image/Fiddler-draw_B2.png",
              scale = 0.21,
              x = 0.26,
-             y = 0.06)
+             y = 0.1)
 p2
 
 #2.3. LCLA. leptodactyla yellow claw vs leptodactyla yellow claw ( both natural white carapaces) ----
@@ -82,7 +82,7 @@ p3 <- ggplot(data = data_LCLA_agg, aes(x = species, y = female_choice, fill = sp
                    )), 
                    expression(italic('L. leptodactyla'))
                    )) +
-  labs(x = "Treatments", y = "Female choice", subtitle = 'p > 0.05')+
+  labs(x = "Treatments", y = "Female choice")+
   ylim(0, 45)+
   theme_test(base_size = 18)
 p3
@@ -92,11 +92,11 @@ p3<- ggdraw() +
   draw_image(image = "image/Fiddler-draw_C1.png", 
              scale = 0.21,
              x = -0.114, 
-             y = 0.29) +
+             y = 0.36) +
   draw_image(image = "image/Fiddler-draw_C2.png",
              scale = 0.21,
              x = 0.26,
-             y = 0.15) #quanto menor, mais baixo
+             y = 0.2) #quanto menor, mais baixo
 p3
 
 #2.4. LACA. leptodactyla yellow claw vs cumulanta yellow claw (both natural carapaces) ----
@@ -109,7 +109,7 @@ p4 <- ggplot(data = data_LACA_agg, aes(x = species, y = female_choice, fill = sp
                    )), 
                    expression(italic('L. cumulanta'))
                    )) +
-  labs(x = "Treatments", y = "Female choice", subtitle = 'p < 0.001')+
+  labs(x = "Treatments", y = "Female choice")+
   ylim(0, 40)+
   theme_test(base_size = 18)
 p4
@@ -119,11 +119,11 @@ p4 <- ggdraw() +
   draw_image(image = "image/Fiddler-draw_D1.png", 
              scale = 0.21,
              x = -0.114, 
-             y = 0.26) +
+             y = 0.32) +
   draw_image(image = "image/Fiddler-draw_D2.png",
              scale = 0.21,
              x = 0.26,
-             y = -0.15)
+             y = -0.13)
 p4
 
 #2.5. LPCB. leptodactyla dark green painted carapace vs cumulanta white painted carapace (both yellow claw)----
@@ -136,7 +136,7 @@ p5 <- ggplot(data = data_LPCB_agg, aes(x = species, y = female_choice, fill = sp
                    )), 
                    expression(italic('L. cumulanta'))
                    )) +
-  labs(x = "Treatments", y = "Female choice", subtitle = 'p < 0.01')+
+  labs(x = "Treatments", y = "Female choice")+
   ylim(0, 30)+
   theme_test(base_size = 18)
 p5
@@ -146,11 +146,11 @@ p5<- ggdraw() +
   draw_image(image = "image/Fiddler-draw_E1.png", 
              scale = 0.21,
              x = -0.114, 
-             y = -0.10) +
+             y = -0.08) +
   draw_image(image = "image/Fiddler-draw_E2.png",
              scale = 0.21,
              x = 0.26,
-             y = 0.26)
+             y = 0.33)
 p5
 
 #2.6. LBCP. leptodactyla white painted carapace vs cumulanta dark green painted carapace (both yellow claw)----
@@ -163,7 +163,7 @@ p6 <- ggplot(data = data_LBCP_agg, aes(x = species, y = female_choice, fill = sp
                    )), 
                    expression(italic('L. cumulanta'))
                    )) +
-  labs(x = "Treatments", y = "Female choice", subtitle = 'p < 0.01')+
+  labs(x = "Treatments", y = "Female choice")+
   ylim(0, 30)+
   theme_test(base_size = 18)
 p6
@@ -173,11 +173,11 @@ p6 <- ggdraw() +
   draw_image(image = "image/Fiddler-draw_E2.png", 
              scale = 0.21,
              x = -0.114, 
-             y = 0.24) +
+             y = 0.31) +
   draw_image(image = "image/Fiddler-draw_E1.png",
              scale = 0.21,
              x = 0.26,
-             y = -0.08)
+             y = -0.06)
 p6
 
 #3. Plot grid ------------------------------------------------------------------
