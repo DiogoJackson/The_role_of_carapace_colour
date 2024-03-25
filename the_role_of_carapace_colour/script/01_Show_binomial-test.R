@@ -84,6 +84,7 @@ p3 <- ggplot(data = data_LCLA_agg, aes(x = species, y = female_choice, fill = sp
                    )) +
   labs(x = "Treatments", y = "Female choice")+
   ylim(0, 45)+
+  annotate("text", x = 1.5, y = 36, size = 5, label = "ns")+
   theme_test(base_size = 18)
 p3
 
