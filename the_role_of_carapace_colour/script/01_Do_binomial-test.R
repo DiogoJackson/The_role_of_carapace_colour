@@ -8,8 +8,10 @@
 library(tidyverse)
 library(sjPlot)
 
+options(scipen = 999)
+
 #1. Binomial analysis ----
-#1.1 #All ll and lc in natural colorations ----
+#1.1 #(A) All ll and lc in natural colorations ----
 data_LNCN <- read.csv("data/processed/processed_data_natural.csv")
 data_LNCN_agg <- aggregate(female_choice ~ species, data = data_LNCN, FUN = sum)
 
@@ -19,7 +21,7 @@ data_LNCN_agg <- aggregate(female_choice ~ species, data = data_LNCN, FUN = sum)
 binomial_1 <- binom.test(51,60, alternative = "greater") 
 binomial_1                      
 
-#1.2 ll (Claw painted in grey, and carapace without paint) x lc (Claw painted in yellow, and carapace without paint)
+#1.2 (B) ll (Claw painted in grey, and carapace without paint) x lc (Claw painted in yellow, and carapace without paint)
 data_LCCA <- read.csv("data/processed/processed_data_LCxCA.csv")
 data_LCCA_agg <- aggregate(female_choice ~ species, data = data_LCCA, FUN = sum)
 data_LCCA_agg
@@ -27,7 +29,7 @@ data_LCCA_agg
 binomial_2 <- binom.test(39,60, alternative = "greater")
 binomial_2                      
 
-#1.3 ll (Claw painted in grey, and carapace without paint) x ll (Claw painted in yellow, and carapace without paint)
+#1.3 (C) ll (Claw painted in grey, and carapace without paint) x ll (Claw painted in yellow, and carapace without paint)
 data_LCLA <- read.csv("data/processed/processed_data_LCxLA.csv")
 data_LCLA_agg <- aggregate(female_choice ~ species, data = data_LCLA, FUN = sum)
 data_LCLA_agg
@@ -35,7 +37,7 @@ data_LCLA_agg
 binomial_3 <- binom.test(35,60, alternative = "greater")
 binomial_3
 
-#1.4 ll (Claw painted in yellow, and carapace without paint) x lc (Claw painted in yellow, and carapace without paint)
+#1.4 (D) ll (Claw painted in yellow, and carapace without paint) x lc (Claw painted in yellow, and carapace without paint)
 data_LACA <- read.csv("data/processed/processed_data_LAxCA.csv")
 data_LACA_agg <- aggregate(female_choice ~ species, data = data_LACA, FUN = sum)
 data_LACA_agg
@@ -43,7 +45,7 @@ data_LACA_agg
 binomial_4 <- binom.test(29,33, alternative = "greater")
 binomial_4
 
-#1.5 ll (Claw painted in yellow, and carapace painted dark green) x lc (Claw painted in yellow, and carapace painted white)
+#1.5 (E) ll (Claw painted in yellow, and carapace painted dark green) x lc (Claw painted in yellow, and carapace painted white)
 data_LPCB <- read.csv("data/processed/processed_data_LPxCB.csv")
 data_LPCB_agg <- aggregate(female_choice ~ species, data = data_LPCB, FUN = sum)
 data_LPCB_agg

@@ -28,6 +28,7 @@ p1 <- ggplot(data = data_LNCN_agg, aes(x = species, y = female_choice, fill = sp
                                                 )), 
                               expression(italic('L. cumulanta'))
                               )) +
+  annotate("text", x = 1.5, y = 63, size = 6, label = "***")+
   labs(x = "Treatments", y = "Female choice")+
   ylim(0, 63)+
   theme_test(base_size = 18)
@@ -55,6 +56,7 @@ p2 <- ggplot(data = data_LCCA_agg, aes(x = species, y = female_choice, fill = sp
                    )), 
                    expression(italic('L. cumulanta'))
                    )) +
+  annotate("text", x = 1.5, y = 50, size = 6, label = "*")+
   labs(x = "Treatments", y = "Female choice")+
   ylim(0, 50)+
   theme_test(base_size = 18)
@@ -84,7 +86,7 @@ p3 <- ggplot(data = data_LCLA_agg, aes(x = species, y = female_choice, fill = sp
                    )) +
   labs(x = "Treatments", y = "Female choice")+
   ylim(0, 45)+
-  annotate("text", x = 1.5, y = 36, size = 5, label = "ns")+
+  annotate("text", x = 1.5, y = 45, size = 6, label = "ns")+
   theme_test(base_size = 18)
 p3
 
@@ -110,6 +112,7 @@ p4 <- ggplot(data = data_LACA_agg, aes(x = species, y = female_choice, fill = sp
                    )), 
                    expression(italic('L. cumulanta'))
                    )) +
+  annotate("text", x = 1.5, y = 40, size = 6, label = "***")+
   labs(x = "Treatments", y = "Female choice")+
   ylim(0, 40)+
   theme_test(base_size = 18)
@@ -137,6 +140,7 @@ p5 <- ggplot(data = data_LPCB_agg, aes(x = species, y = female_choice, fill = sp
                    )), 
                    expression(italic('L. cumulanta'))
                    )) +
+  annotate("text", x = 1.5, y = 30, size = 6, label = "***")+
   labs(x = "Treatments", y = "Female choice")+
   ylim(0, 30)+
   theme_test(base_size = 18)
@@ -164,6 +168,7 @@ p6 <- ggplot(data = data_LBCP_agg, aes(x = species, y = female_choice, fill = sp
                    )), 
                    expression(italic('L. cumulanta'))
                    )) +
+  annotate("text", x = 1.5, y = 30, size = 6, label = "**")+
   labs(x = "Treatments", y = "Female choice")+
   ylim(0, 30)+
   theme_test(base_size = 18)
@@ -182,7 +187,8 @@ p6 <- ggdraw() +
 p6
 
 #3. Plot grid ------------------------------------------------------------------
-p_all <- plot_grid(p1, p2,p3,p4,p5, p6, ncol = 2, 
+p_all <- plot_grid(p1, p2, p3, p4, p5, p6, 
+                   ncol = 2, 
                    labels = "AUTO", 
                    align = "vh",
                    label_size = 20)
