@@ -1,8 +1,8 @@
 # The role of carapace colour in species recognition in a fiddler crab
 
-_Diogo Jackson de Aquino Silva, Marilia Fernandes Erickson, and Daniel Marques de Almeida Pessoa
-
-![](image/Figure_1.png)
+Diogo Jackson de Aquino Silva, 
+Marilia Fernandes Erickson, and 
+Daniel Marques de Almeida Pessoa
     
 ***
 
