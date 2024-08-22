@@ -4,9 +4,9 @@ _Diogo Jackson de Aquino Silva, Marilia Fernandes Erickson, and Daniel Marques d
     
 ***
 
-**Journal**: [Animal Behaviour]
+**Journal**: [Animal Behaviour](https://www.sciencedirect.com/journal/animal-behaviour/)
 
-**DOI**: [doi](doi)
+**DOI**: [https://doi.org/10.1016/j.anbehav.2024.07.016](https://doi.org/10.1016/j.anbehav.2024.07.016)
 
 ## Content of the repository
 
@@ -26,11 +26,11 @@ _Diogo Jackson de Aquino Silva, Marilia Fernandes Erickson, and Daniel Marques d
     
 ***
 
-When using the __data available__ in this repository, please cite the original publication and the dataset.  
+When using the __data available__ in this repository, please cite the original publication.
 
 Contact diogo.silva.094@ufrn.edu.br for any further information.  
 
 **Citation:**
 
-> **Silva, D. J. A**...
+> Silva, D. J. A., Erickson, M. F., & Pessoa, D. M. A. (2024). The role of carapace colour in species recognition in a fiddler crab. *Animal Behaviour*, 216, 37–44. https://doi.org/10.1016/j.anbehav.2024.07.016
 ***
